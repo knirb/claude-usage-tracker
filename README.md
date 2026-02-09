@@ -34,6 +34,10 @@ The `.app` bundle will be at `src-tauri/target/release/bundle/macos/Claude Usage
 
 The app reads your Claude Code OAuth credentials from the macOS Keychain and calls the same usage API endpoint that powers the `/usage` command and web dashboard. All HTTP requests happen in the Rust backend — your tokens never touch the frontend.
 
+## Disclaimer
+
+This app uses an **undocumented Anthropic API** endpoint and reuses OAuth credentials issued to Claude Code. It is not affiliated with, endorsed by, or sanctioned by Anthropic. The endpoint could change or break at any time. Use at your own risk.
+
 ## Tech stack
 
 - [Tauri v2](https://tauri.app/) — Rust backend + WebView frontend
