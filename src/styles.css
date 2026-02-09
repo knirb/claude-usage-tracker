@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  background: #252525;
+  color: #d4d4d4;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#app {
+  background: #252525;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8e8e8;
+}
+
+.loading {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 40px 0;
+}
+
+.error {
+  background: #352020;
+  border: 1px solid #4a2a2a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #e09090;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#usage-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.divider {
+  height: 1px;
+  background: #363636;
+  margin: 2px 0;
+}
+
+.group-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8e8e8;
+}
+
+.usage-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #383838;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease, background-color 0.4s ease;
+  width: 0%;
+  background: #6b8acd;
+}
+
+.progress-fill.level-low    { background: #6b8acd; }
+.progress-fill.level-mid    { background: #c9a24d; }
+.progress-fill.level-high   { background: #c27a5a; }
+
+.percentage {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.reset-time {
+  font-size: 11px;
+  color: #666;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #555;
+}
+
+#refresh-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s ease;
+}
+
+#refresh-btn:hover {
+  color: #aaa;
+}
+
+#refresh-btn.spinning {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

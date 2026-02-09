@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <title>Claude Usage</title>
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <span class="title">Your usage limits</span>
+    </div>
+    <div id="error" class="error hidden"></div>
+    <div id="loading" class="loading">Loading usage data…</div>
+    <div id="usage-sections" class="hidden">
+      <section class="usage-section">
+        <div class="section-label">Current session</div>
+        <div class="bar-row">
+          <div class="progress-bar"><div class="progress-fill" id="five-hour-bar"></div></div>
+          <span class="percentage" id="five-hour-pct">—</span>
+        </div>
+        <div class="reset-time" id="five-hour-reset"></div>
+      </section>
+      <div class="divider"></div>
+      <div class="group-label">Weekly limits</div>
+      <section class="usage-section">
+        <div class="section-label">All models</div>
+        <div class="bar-row">
+          <div class="progress-bar"><div class="progress-fill" id="seven-day-bar"></div></div>
+          <span class="percentage" id="seven-day-pct">—</span>
+        </div>
+        <div class="reset-time" id="seven-day-reset"></div>
+      </section>
+      <section class="usage-section">
+        <div class="section-label">Sonnet only</div>
+        <div class="bar-row">
+          <div class="progress-bar"><div class="progress-fill" id="sonnet-bar"></div></div>
+          <span class="percentage" id="sonnet-pct">—</span>
+        </div>
+        <div class="reset-time" id="sonnet-reset"></div>
+      </section>
+    </div>
+    <div class="footer">
+      <span id="fetched-at"></span>
+      <button id="refresh-btn" title="Refresh">↻</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

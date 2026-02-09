@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicerdicer/tauri-v2-schema/main/capability.json",
+  "identifier": "default",
+  "description": "Default capability for the main window",
+  "windows": ["popup"],
+  "permissions": [
+    "core:default",
+    "core:window:default",
+    "core:window:allow-close",
+    "core:window:allow-hide",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:event:default",
+    "core:event:allow-listen",
+    "core:event:allow-emit",
+    "positioner:default",
+    "positioner:allow-set-tray-icon-state"
+  ]
+}
