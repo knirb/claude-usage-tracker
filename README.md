@@ -17,16 +17,6 @@ Click the tray icon to see your current session and weekly usage at a glance.
 - macOS 10.15+
 - [Claude Code](https://claude.ai/claude-code) signed in (the app reads your OAuth token from the macOS Keychain)
 
-## Install from DMG
-
-Download the latest `.dmg` from [Releases](https://github.com/knirb/claude-usage-tracker/releases), open it, and drag to Applications.
-
-Since the app isn't code-signed, you may need to run this once after installing:
-
-```sh
-sudo xattr -cr "/Applications/Claude Usage Tracker.app"
-```
-
 ## Build from source
 
 Requires [Rust](https://rustup.rs/) and [Node.js](https://nodejs.org/).
